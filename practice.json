@@ -1,0 +1,16 @@
+{"comidas_semana": 
+	    {"categoria": ["Pasta", "Carne","Verduras", "Legumbres","Arroces y cereales"],
+	     "tiempo": ["30m", "45m", "10m", "15m"]},
+
+"comidas_finde": 
+	    {"categoria": ["Verduras", "Sopas y cremas", "Aves y caza", "Ensaladas", "Pescado"],
+	     "tiempo": ["30m", "1h 30m", "45m", "NaN", "2h 30m", "24h", "4h", "3h", "8h", "6h"]},
+
+"cenas_semana": 
+	{"categoria": ["Arroces y cereales", "Pasta", "Carne","Verduras", "Pescado","Legumbres"],
+	 "tiempo": ["30m", "45m", "10m", "15m"]},
+
+"cenas_finde": 
+	{"categoria": ["Verduras", "Sopas y cremas", "Aves y caza", "Ensaladas", "Pescado"],
+	 "tiempo": ["30m", "1h 30m", "45m", "NaN", "2h 30m", "24h", "4h", "3h", "8h", "6h"]}
+}
