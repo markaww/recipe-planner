@@ -45,10 +45,11 @@ v_cena = cenas_semana.loc[np.random.choice(cenas_semana.index.values, 1)]
 s_cena = cenas_finde.loc[np.random.choice(cenas_finde.index.values, 1)]
 d_cena = cenas_finde.loc[np.random.choice(cenas_finde.index.values, 1)]
 
+
 msg = MIMEMultipart('alternative')
 msg['Subject'] = 'Meal plan'
 msg['From'] = os.getenv('EMAIL')
-msg['To'] = destination = os.getenv('DESTINATION')
+msg['To'] = os.getenv('MAILING_LIST')
 pwd = os.getenv('PASSWORD')
 
 
@@ -155,6 +156,6 @@ def send_email():
 
         smtp.login(msg['From'], pwd)
 
-        smtp.sendmail(msg['From'], msg['To'], msg.as_string())
+        smtp.sendmail(msg['From'], os.getenv('MAILING_LIST').split(', '), msg.as_string())
 
 send_email()
