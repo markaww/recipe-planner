@@ -38,7 +38,7 @@ d_cena = cenas_finde.loc[np.random.choice(cenas_finde.index.values, 1)]
 msg = MIMEMultipart('alternative')
 msg['Subject'] = 'Meal plan'
 msg['From'] = os.getenv('EMAIL')
-msg['To'] = destination = os.getenv('DESTINATION')
+msg['To'] = os.getenv('DESTINATION')
 pwd = os.getenv('PASSWORD')
 
 text = f"""Hi! Here's your meal plan for this week:"""
@@ -142,4 +142,4 @@ def send_email():
 
         smtp.login(msg['From'], pwd)
 
-        smtp.sendmail(msg['From'], msg['To'], msg.as_string())
+        smtp.sendmail(msg['From'], msg['To'].split(', '), msg.as_string())

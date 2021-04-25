@@ -1,11 +1,12 @@
 import pandas as pd
 import json
+import numpy as np
 
 from p_scrapper.m_scrapper import recipes
 
 # import preferences updates in a separate json file
 
-with open('../practice.json') as f:
+with open('practice.json') as f:
     preferences = json.load(f)
 
 # filter recipes as per json preferences into 4 groups:
