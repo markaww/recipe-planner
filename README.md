@@ -2,14 +2,10 @@
 
 This is a tool that generates a weekly meal plan of customized recipes
 
-The recipes themselves are scrapped from the website 'recetasgratis.com' (spanish). For each recipe, it's name, url, category and 5 other features are scrapped. 
-After that, the user can set up a selection based on their preferences. The output is a 7X2 table with recipes for the week
+The tool starts with a scraping of the recetasgratis.net using BeautifulSoup. The result is a dataframe saved to csv format containing over 10.000 recipes with 9 columns. 
 
-This program will send the meal plan via email. For this to work you will need to set up your email information in an environment variable. To do this, in the repository, create a file called ".env". In it, create 3 variables: 
+Next, the program uses a pre-defined set of customized preferences (specified in the separate JSON file) to filter the table. 14 meals are selected for each week, 7 lunches and 7 dinners, following the customized preferences that they user defined for each day. 
 
-EMAIL="the email account that will send this plan" 
+The resulting selection is then compiled into the body of an email in HTML format. This email is then distributed to a mailing list which was separately defined using environment variables and called into the script. 
 
-PASSWORD="The password for that email account" 
-
-DESTINATION="the email you want to send this plan to"
-
+Finally, the script was given a schedule to make it run automatically on a weekly basis, and it was uploaded to the cloud (DigitalOcean) so that it would run autonomously.  
