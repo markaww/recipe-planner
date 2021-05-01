@@ -1,11 +1,19 @@
 # The weekly meal planner
 
-This is a tool that generates a weekly meal plan of customized recipes
+Beta version of a tool that generates a customizable meal plan out of a large dataset of screapped recipes
 
-The tool starts with a scraping of the website  recetasgratis.net using BeautifulSoup. The result is a dataframe saved to csv format containing over 10.000 recipes with 9 columns. 
+### Technology stack 
 
-Next, the program uses a pre-defined set of customized preferences (specified in the separate JSON file) to filter the table. 14 meals are selected for each week, 7 lunches and 7 dinners, following the customized preferences that the user defined for each day. 
+Python (BeautifulSoup, pandas, numpy, dotenv, smtplib, email.mime), json, DigitalOcean. 
 
-The resulting selection is then compiled into the body of an email in HTML format. This email is then distributed to a mailing list which was separately defined using environment variables and called into the script. 
+### Inspiration 
 
-Finally, the script was given a schedule to make it run automatically on a weekly basis, and it was uploaded to the cloud (DigitalOcean) so that it would run autonomously.  
+Grocery shopping takes time and effort, but unplanned grocerry shopping takes even longer. When we make meal plans, we reduce the number of visits to the supormarket and the money that we spend, and we can enhance the balance of our diet and be more creative in our cooking. Planning your weekly meal brings a lot of benefits but it can also be a time consuming and tiring process. This tood does the work for you. 
+
+After scraping over 10k recipes from the website [Link](http://www.recetasgratis.net), you can set up out preferences using the separate json file. The tool then will send you via email a selection of 7 meals and 7 dinners for hte week. 
+
+### Configuration 
+
+If you know me, and you'd like to have your name added to the distribution list of the weekly meal plan, let me know! On the other hand, you can also set the tool up in your own terminal. To do this, after cloning the repo, you'll need to create a file called .env and update it with the following information: 
+
+![alt text](unnamed.png)
