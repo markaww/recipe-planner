@@ -1,3 +1,4 @@
+
 # The weekly meal planner
 
 Beta version of a tool that generates a customizable meal plan out of a large dataset of screapped recipes
@@ -17,3 +18,11 @@ After scraping over 10k recipes from the website [Link](http://www.recetasgratis
 If you know me, and you'd like to have your name added to the distribution list of the weekly meal plan, let me know! On the other hand, you can also set the tool up in your own terminal. To do this, after cloning the repo, you'll need to create a file called .env and update it with the following information: 
 
 ![alt text](unnamed.png)
+
+### Folder structure
+
+Don't forget to set up a `.env` file. This program requires a sender and recipient email to deliver the results. 
+
+### To Do 
+
+
