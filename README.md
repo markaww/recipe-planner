@@ -21,27 +21,31 @@ If you know me, and you'd like to have your name added to the distribution list 
 ### Folder structure
 
 ```
-└── project
-    ├── __trash__
-    ├── .gitignore
-    ├── .env
-    ├── requeriments.txt
-    ├── README.md
-    ├── main_script.py
+└── recipe-planner
+    ├── data exports
     ├── notebooks
-    │   ├── notebook1.ipynb
-    │   └── notebook2.ipynb
-    ├── package1
-    │   ├── module1.py
-    │   └── module2.py
-    └── data
-        ├── raw
-        ├── processed
-        └── results
+    ├── p_email
+    ├── p_filter
+    ├── p_scrapper
+    ├── .git
+    ├── .idea
+    ├── main.py 
+    ├── main_demo.py
+    ├── practice.json
+    ├── README.md
+    ├── .env
+    └── .gitignore
+
 ```
 
 >Don't forget to set up a `.env` file. This program requires a sender and recipient email to deliver the results. 
 
 ### To Do 
 
+1) Condensed ingredients list
 
+2) Link to supermarket scrapping - price calculator
+
+3) Add nutritional information
+
+4 Remove unwanted recipes
